@@ -80,13 +80,13 @@ function setBtnAndText() {
 }
 function getAllItems(data) {
     let items = [];
-    console.log(data);
     data.forEach((el) => {
         el.items.forEach((obj) => {
-            const newObj = {'type': el.type, translate: el.translate, ...obj}
+            const newObj = {type: el.type, translate: el.translate, ...obj}
             items.push(newObj)
         })
     })
+
     return items;
 }
 
@@ -97,6 +97,7 @@ function setSortArrayItems(items) {
         newReturnData[key]['type'] = item.type;
         newReturnData[key]['items'] = [item];
     })
+
     return newReturnData
 }
 function sortPrice(data) {
